@@ -61,13 +61,13 @@ client.on('ready',  () => {
   
   
   client.on("message", message => {
-    if (message.content === "2help") {
+    if (message.content === "3help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
        3bc | لأرسال برود كاست للكل
-       3sobc  |  لأرسال برود كاست للأونلاين
+       3obc  |  لأرسال برود كاست للأونلاين
        ** `)
    message.author.sendEmbed(embed)
    
