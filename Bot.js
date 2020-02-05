@@ -1,13 +1,13 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "2"
-var adminprefix = '2'
+var prefix = "3"
+var adminprefix = '3'
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("2obc")) {
+    if (message.content.startsWith("3bc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,11 +23,11 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "2";
+  var prefix = "3";
 
   client.on("message", message => {
   
-              if (message.content.startsWith(prefix + "bc")) {
+              if (message.content.startsWith(prefix + "obc")) {
                            if (!message.member.hasPermission("ADMINISTRATOR"))  return;
     let args = message.content.split(" ").slice(1);
     var argresult = args.join(' '); 
@@ -41,7 +41,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("!avatar")) {
+if (message.content.startsWith("3avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -55,7 +55,7 @@ client.on('ready',  () => {
 
 
   client.on('message', msg => {
-    if(msg.content === '2help')
+    if(msg.content === '3help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -66,8 +66,8 @@ client.on('ready',  () => {
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-       2obc | لأرسال برود كاست للكل
-       2bc  |  لأرسال برود كاست للأونلاين
+       3bc | لأرسال برود كاست للكل
+       3sobc  |  لأرسال برود كاست للأونلاين
        ** `)
    message.author.sendEmbed(embed)
    
